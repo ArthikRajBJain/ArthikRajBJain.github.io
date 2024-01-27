@@ -68,7 +68,3 @@ Conclusion:
 ------
 
 FourCastNet is not merely a weather model; it is a revelation in the marriage of deep learning and meteorology. Its speed, efficiency, and accuracy signal a new era in weather forecasting—one that promises benefits in disaster management, energy planning, and scientific exploration. As the journey of advancements continues, FourCastNet stands tall, unraveling the complexities of our atmosphere with the precision of a symphony conductor directing a celestial orchestra.
-
-
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
