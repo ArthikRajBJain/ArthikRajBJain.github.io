@@ -64,6 +64,7 @@ While FourCastNet is currently without a real-time data assimilation component, 
 Example:
 ------
 ![Illustration of global Total Precipitiation](/images/Example1.png)
+
 Conclusion:
 ------
 
