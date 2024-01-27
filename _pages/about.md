@@ -1,6 +1,7 @@
 ---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "FourCastNet: A Quantum Leap in Weather
+Forecasting Unveiled"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,43 +9,65 @@ redirect_from:
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+Weather forecasting, an intricate dance between nature's forces and computational prowess, has taken a transformative leap with the emergence of FourCastNet. In the evolving landscape of meteorology, this global high-resolution weather model stands as a testament to the power of deep learning, promising to reshape the very fabric of how we comprehend and predict atmospheric phenomena.
 
-A data-driven personal website
+Diving into FourCastNet: A Symphony of Data-Driven Forecasting
 ======
-Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+Overview:
+------
 
-Getting started
+At its core, FourCastNet is a testament to the fusion of innovation and neural networks. Developed on the robust foundations of Fourier Neural Operator (FNO) and Advection-Free Neural Operator (AFNO), this deep learning model has swiftly become a game-changer in the realm of weather prediction. Crafted in less than a year, it represents a departure from traditional numerical weather prediction (NWP) methodologies.
+
+Model Description:
+------
+
+Efficient Ensemble Forecasting:
+------
+
+The prowess of FourCastNet becomes apparent in its ability to orchestrate a 100-member ensemble forecast seamlessly on a single 4GPU A100 node. This efficiency, a stark contrast to the resource-intensive demands of conventional models like the Integrated Forecasting System (IFS), propels FourCastNet to the forefront. At a 30km resolution, it operates at a mind-boggling speed—145,000 times faster than its IFS counterpart. The energy efficiency is equally remarkable, consuming a mere 24,000 times less energy.
+
+Comparison with IFS Model:
+------
+
+In the arena of weather prediction, FourCastNet stands tall against the formidable IFS model. Despite some limitations, such as the absence of physics constraints and a reduced variable set, FourCastNet holds its ground. Its accuracy rivals that of IFS in numerous variables, with notable excellence in precipitation forecasting, outpacing IFS in select scenarios.
+
+Limited-Purpose Forecasting:
+------
+
+FourCastNet's brilliance truly shines in scenarios demanding precision and efficiency. Imagine a wind farm operator seeking short-term surface wind speed forecasts—FourCastNet emerges as an attractive choice. Its minimal infrastructure requirements redefine the landscape, enabling accurate forecasts with a tabletop computer and a single GPU.
+
+Comparison with State-of-the-Art DL Weather Prediction:
+------
+
+In a head-to-head clash with the state-of-the-art DLWP model, FourCastNet emerges victorious. Predicting more variables at a significantly higher resolution, it goes beyond the status quo. Visual metrics, including Accuracy (ACC) and Root Mean Square Error (RMSE), underscore FourCastNet's dominance, even when its outputs are downscaled to match DLWP's resolution.
+
+Implications and Future Trajectories:
 ======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
 
-Site-wide configuration
+Efficiency and Accessibility:
 ------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
 
-Create content & metadata
+FourCastNet's efficiency, transcending traditional models by four to five orders of magnitude, unfolds a new chapter in weather prediction. Rapid generation of large ensembles allows for nuanced insights into uncertainties, paving the way for improved early warnings and swift impact assessments. The model's speed also invites exploration, enabling rapid hypothesis testing for weather variability mechanisms.
+
+Practical Applications:
 ------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
 
-**Markdown generator**
+The precision of FourCastNet in short-range precipitation forecasts extends its influence to disaster mitigation and rapid responses. In the realm of wind energy, its high-resolution wind forecasts become a compass for optimizing layouts and navigating the fluctuations of wind power output.
 
-I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the academicpages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
-
-How to edit your site's GitHub repository
+Future Horizons:
 ------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+
+While FourCastNet is currently without a real-time data assimilation component, future iterations are poised to bridge this gap. The model's potential to predict all variables in NWP hints at a revolution in weather prediction across all atmospheric levels.
+
+Example:
+------
+
+Conclusion:
+------
+
+FourCastNet is not merely a weather model; it is a revelation in the marriage of deep learning and meteorology. Its speed, efficiency, and accuracy signal a new era in weather forecasting—one that promises benefits in disaster management, energy planning, and scientific exploration. As the journey of advancements continues, FourCastNet stands tall, unraveling the complexities of our atmosphere with the precision of a symphony conductor directing a celestial orchestra.
+
 
 Example: editing a markdown file for a talk
 ![Editing a markdown file for a talk](/images/editing-talk.png)
-
-For more info
-------
-More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
