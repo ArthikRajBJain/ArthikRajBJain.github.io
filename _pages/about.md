@@ -21,6 +21,7 @@ At its core, FourCastNet is a testament to the fusion of innovation and neural n
 
 Model Description:
 ------
+![Machine Learning Model of FourCastNet](/images/Model.png)
 
 Efficient Ensemble Forecasting:
 ------
@@ -62,7 +63,7 @@ While FourCastNet is currently without a real-time data assimilation component, 
 
 Example:
 ------
-
+![Illustration of global Total Precipitiation](/images/Example1.png)
 Conclusion:
 ------
 
