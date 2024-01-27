@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Unveiling FourCastNet: Redefining Weather Forecasting with Deep Learning"
+title                    : "FourCastNet: A Quantum Leap in Weather Forecasting Unveiled"
 title_separator          : "-"
 name                     : &name "Arthik Raj B Jain"
 description              : &description "Information Technology, University of Stuttgart"
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "www.linkedin.com/in/arthikrajbjain"
+  linkedin         : "arthikrajbjain"
   orcid            : #"http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
