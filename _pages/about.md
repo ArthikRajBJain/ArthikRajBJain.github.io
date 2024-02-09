@@ -101,7 +101,7 @@ The comparison between ERA5, FourCastNet, and IFS examines extreme percentiles. 
 
 ## Limited-Purpose Forecasting:
 
-FourCastNet's brilliance truly shines in scenarios demanding precision and efficiency. Imagine a wind farm operator seeking short-term surface wind speed forecasts—FourCastNet emerges as an attractive choice. Its minimal infrastructure requirements redefine the landscape, enabling accurate forecasts with a tabletop computer and a single GPU.
+FourCastNet's brilliance truly shines in scenarios demanding precision and efficiency. Imagine a wind farm operator seeking short-term surface wind speed forecasts - FourCastNet emerges as an attractive choice. Its minimal infrastructure requirements redefine the landscape, enabling accurate forecasts with a tabletop computer and a single GPU.
 
 ## Comparison with State-of-the-Art DL Weather Prediction:
 
@@ -158,3 +158,13 @@ In conclusion, FourCastNet represents a significant leap forward in the field of
 By harnessing the power of data-driven modeling, FourCastNet enables meteorologists, policymakers, and stakeholders to make informed decisions, mitigate risks, and build resilient communities in the face of increasingly complex and dynamic weather phenomena. As we look towards the future, continued research, collaboration, and innovation will drive further advancements in atmospheric science, ushering in a new era of precision forecasting and proactive risk management.
 
 With its unparalleled capabilities and untapped potential, FourCastNet heralds a new chapter in the quest for accurate, reliable, and actionable weather intelligence, empowering us to better understand, anticipate, and adapt to the ever-changing dynamics of our planet's atmosphere. As we embark on this journey of discovery and innovation, FourCastNet stands poised to shape the future of weather forecasting and usher in a new era of resilience, sustainability, and preparedness for generations to come.
+
+# References:
+
+[1]. Pathak, Jaideep, Shashank Subramanian, Peter Harrington, Sanjeev Raja, Ashesh Chattopadhyay, Morteza Mardani, Thorsten Kurth et al. "Fourcastnet: A global data-driven high-resolution weather model using adaptive fourier neural operators." arXiv preprint arXiv:2202.11214 (2022).
+
+[2]. John Guibas, Morteza Mardani, Zongyi Li, Andrew Tao, Anima Anandkumar, and Bryan Catanzaro. Adaptive Fourier Neural Operators: Efficient token mixers for transformers. International Conference on Representation Learning (to appear), April 2022.
+
+[3]. Zongyi Li, Nikola Kovachki, Kamyar Azizzadenesheli, Burigede Liu, Kaushik Bhattacharya, Andrew Stuart, and Anima Anandkumar. Fourier neural operator for parametric partial differential equations. In International Conference on Learning Representations (ICLR), 2021a.
+
+[4]. Jonathan A Weyn, Dale R Durran, and Rich Caruana. Improving data-driven global weather prediction using deep convolutional neural networks on a cubed sphere. Journal of Advances in Modeling Earth Systems, 12(9):e2020MS002109, 2020.
