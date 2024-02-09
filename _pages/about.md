@@ -50,6 +50,7 @@ The Adaptive Fourier Neural Operator (AFNO) model represents a groundbreaking ap
 - Moreover, preliminary experiments indicate that convolutional architectures exhibit limitations in capturing small scales over multiple time steps in auto-regressive inference, further emphasizing the superiority of the ViT-based AFNO model.
 
 ![Machine Learning Model of FourCastNet](/images/Model.png)
+The multi-layer transformer architecture that utilizes the Adaptive Fourier Neural Operator with shared MLP and frequency soft-thresholding for spatial token mixing. The input frame is first divided into a h × w grid of patches, where each patch has a small size p × p × c. Each patch is then embedded in a higher dimensional space with high number of latent channels and position embedding is added to form a sequence of tokens. Tokens are then mixed spatially using AFNO, and subsequently for each token the latent channels are mixed. This process is repeated for L layers, and finally a linear decoder reconstructs the patches for the next frame from the final embedding. The right-hand panels describe the FourCastNet model’s additional training and inference modes: (b) two-step fine-tuning, (c) backbone model that forecasts the 20 variables in Table 1 with secondary precipitation diagnostic model (note that p(k + 1) denotes the 6 hour accumulated total precipitation that falls between k + 1 and k + 2 time steps) (d) forecast model in free-running autoregressive inference mode.
 
 ## Efficient Ensemble Forecasting:
 
