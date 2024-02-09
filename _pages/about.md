@@ -9,18 +9,46 @@ redirect_from:
   - /about.html
 ---
 
-Weather forecasting, an intricate dance between nature's forces and computational prowess, has taken a transformative leap with the emergence of FourCastNet. In the evolving landscape of meteorology, this global high-resolution weather model stands as a testament to the power of deep learning, promising to reshape the very fabric of how we comprehend and predict atmospheric phenomena.
+In the dynamic world of weather forecasting, advancements in technology continually push the boundaries of accuracy and efficiency. One such groundbreaking development is FourCastNet, a global data-driven high-resolution weather forecasting model that promises to revolutionize how we perceive and predict weather events. Weather forecasting plays a pivotal role in our daily lives, from planning outdoor activities to preparing for extreme weather events. Traditional numerical weather prediction (NWP) models have long been the backbone of forecasting systems, but they come with limitations in resolution, speed, and computational efficiency. Enter FourCastNet – a cutting-edge deep learning model designed to address these challenges and redefine the landscape of weather forecasting.
 
-Diving into FourCastNet: A Symphony of Data-Driven Forecasting
-======
+#Diving into FourCastNet: A Symphony of Data-Driven Forecasting
 
-Overview:
-------
+##Overview:
 
 At its core, FourCastNet is a testament to the fusion of innovation and neural networks. Developed on the robust foundations of Fourier Neural Operator (FNO) and Advection-Free Neural Operator (AFNO), this deep learning model has swiftly become a game-changer in the realm of weather prediction. Crafted in less than a year, it represents a departure from traditional numerical weather prediction (NWP) methodologies.
 
-Model Description:
-------
+##Understanding Ensemble Forecasting:
+
+FourCastNet leverages the power of ensemble forecasting, a technique that models multiple possible trajectories of a weather system to capture uncertainty and improve forecast accuracy. By generating large ensemble forecasts using perturbed initial conditions, FourCastNet provides probabilistic forecasts that quantify the likelihood of extreme events, such as hurricanes and atmospheric rivers. This ensemble approach enables forecasters to assess the range of possible outcomes and make more informed decisions.
+
+##Computational Efficiency:
+
+What sets FourCastNet apart is its remarkable computational efficiency. Compared to traditional NWP models like the Integrated Forecasting System (IFS), FourCastNet is orders of magnitude faster and consumes significantly less energy. This efficiency enables the generation of large ensemble forecasts in seconds, facilitating rapid response to weather events and enhanced uncertainty quantification. Moreover, FourCastNet's efficient use of computational resources makes it scalable, allowing it to handle increasingly large datasets and model more complex atmospheric processes.
+
+##Model Description:
+
+Fourier-based neural network forecasting model, to generate global data-driven forecasts of key atmospheric variables at a resolution of 0.25◦, which corresponds to a spatial resolution of roughly 30 km × 30 km near the equator and a global grid size of 720 × 1440 pixels. This allows us, for the first time, to make a direct comparison with the high-resolution Integrated Forecasting System (IFS) model of the European Center for Medium-Range Weather Forecasting (ECMWF).
+
+The Adaptive Fourier Neural Operator (AFNO) model represents a groundbreaking approach to high-resolution weather forecasting, incorporating state-of-the-art deep learning techniques tailored for complex atmospheric systems. Developed by Guibas et al. in 2022, AFNO combines the robustness of the Fourier Neural Operator (FNO) learning approach with the efficiency of the Vision Transformer (ViT) architecture, offering unparalleled performance in capturing fine-scale atmospheric dynamics.
+
+###Key Components:
+
+1. Fourier Neural Operator (FNO) Integration:
+  - The FNO approach, initially proposed by Li et al. in 2021, has demonstrated remarkable efficacy in modeling complex partial differential equation (PDE) systems, including turbulent Navier-Stokes equations.
+  - By leveraging the Fourier domain, FNO efficiently captures spatial and temporal dependencies, making it an ideal candidate for data-driven atmospheric modeling within the AFNO framework.
+2. Vision Transformer (ViT) Backbone:
+  - ViT architectures have emerged as the gold standard in computer vision tasks, owing to their ability to capture global interactions between features using multi-head self-attention mechanisms.
+  - However, traditional ViT architectures face computational challenges when dealing with high-resolution inputs due to quadratic spatial mixing complexity.
+3. Continuous Global Convolution:
+  - AFNO introduces a novel approach to spatial token mixing, framing the operation as continuous global convolution implemented efficiently in the Fourier domain using Fast Fourier Transforms (FFTs).
+  - This innovative design significantly reduces spatial mixing complexity to O(N log N), where N represents the number of image patches or tokens, enabling scalability to high-resolution datasets.
+
+###Contrasting with Convolutional Architectures:
+
+- Unlike conventional convolutional architectures, which struggle with scalability and memory constraints, AFNO offers practical benefits, particularly at high resolutions.
+- For instance, while a 720x1440 resolution FourCastNet model requires approximately 10GB of memory with a batch size of 1, a convolutional network like the 19-layer ResNet would demand around 83GB for the same resolution.
+- Moreover, preliminary experiments indicate that convolutional architectures exhibit limitations in capturing small scales over multiple time steps in auto-regressive inference, further emphasizing the superiority of the ViT-based AFNO model.
+
 ![Machine Learning Model of FourCastNet](/images/Model.png)
 
 Efficient Ensemble Forecasting:
