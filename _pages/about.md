@@ -73,6 +73,12 @@ The Adaptive Fourier Neural Operator (AFNO) model represents a groundbreaking ap
 - For instance, while a 720x1440 resolution FourCastNet model requires approximately 10GB of memory with a batch size of 1, a convolutional network like the 19-layer ResNet would demand around 83GB for the same resolution.
 - Moreover, preliminary experiments indicate that convolutional architectures exhibit limitations in capturing small scales over multiple time steps in auto-regressive inference, further emphasizing the superiority of the ViT-based AFNO model.
 
+# Example:
+
+![Illustration of global Total Precipitiation](/images/Example1.png)
+
+The FourCastNet was initiated with the condition from the out-of-sample test dataset dated September 8, 2018, at 00:00 UTC. Over 16 time-steps of six hours each in inference mode, corresponding to a 96-hour forecast, the model ran freely. The wind speed at model initialization is depicted in Panel (a), while Panel (b) showcases the model forecasts at a 96-hour lead time (upper panel) alongside the corresponding true wind speeds (lower panel). Notably, FourCastNet accurately predicts wind speeds 96 hours in advance, capturing fine-scale features and accurately tracking the formation and path of Super Typhoon Mangkhut, as well as the intensification and track of other named hurricanes over the four-day period.
+
 ## Efficient Ensemble Forecasting:
 
 The prowess of FourCastNet becomes apparent in its ability to orchestrate a 100-member ensemble forecast seamlessly on a single 4GPU A100 node. This efficiency, a stark contrast to the resource-intensive demands of conventional models like the Integrated Forecasting System (IFS), propels FourCastNet to the forefront. At a 30km resolution, it operates at a mind-boggling speed—145,000 times faster than its IFS counterpart. The energy efficiency is equally remarkable, consuming a mere 24,000 times less energy.
@@ -140,9 +146,6 @@ The advancements showcased by FourCastNet in weather forecasting open up promisi
 3. **Hybrid Modeling Approaches:** Investigating hybrid modeling approaches that combine the strengths of physics-based models and data-driven techniques like FourCastNet can lead to more comprehensive and robust forecasting systems. By synergistically integrating physical principles with empirical insights, hybrid models can overcome limitations associated with individual modeling paradigms and offer more holistic representations of atmospheric dynamics.
 
 4. **Applications Beyond Weather Forecasting:** Exploring applications of FourCastNet beyond traditional weather forecasting domains, such as climate modeling, environmental monitoring, renewable energy management, and disaster risk reduction, can extend its impact and relevance to broader societal challenges. By adapting and customizing FourCastNet's capabilities to diverse problem domains, researchers can address pressing issues related to climate change, sustainability, and resilience.
-
-# Example:
-![Illustration of global Total Precipitiation](/images/Example1.png)
 
 # Conclusion:
 
