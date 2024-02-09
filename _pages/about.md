@@ -29,7 +29,7 @@ What sets FourCastNet apart is its remarkable computational efficiency. Compared
 
 ## Model Description:
 
-Fourier-based neural network forecasting model, to generate global data-driven forecasts of key atmospheric variables at a resolution of 0.25◦, which corresponds to a spatial resolution of roughly 30 km × 30 km near the equator and a global grid size of 720 × 1440 pixels. This allows us, for the first time, to make a direct comparison with the high-resolution Integrated Forecasting System (IFS) model of the European Center for Medium-Range Weather Forecasting (ECMWF).
+Fourier-based neural network forecasting model, to generate global data-driven forecasts of key atmospheric variables at a resolution of 0.25°, which corresponds to a spatial resolution of roughly 30 km × 30 km near the equator and a global grid size of 720 × 1440 pixels. This allows us, for the first time, to make a direct comparison with the high-resolution Integrated Forecasting System (IFS) model of the European Center for Medium-Range Weather Forecasting (ECMWF).
 
 ![Machine Learning Model of FourCastNet](/images/Model.png)
 
@@ -39,19 +39,19 @@ Here's a condensed version of the flow of computation in the model: We begin by 
 
 **Step 1.** Transform tokens to the Fourier domain with
 
-<center>z<sub>m,n</sub> = [DFT(X)]<sub>m,n</sub>,</center>
+<center>z<sub>m,n</sub> = [DFT(X)]<sub>m,n</sub></center>
 <br>
 where m, n index the patch location and DFT denotes a 2D discrete Fourier transform.
 
 **Step 2.** Apply token weighting in the Fourier domain, and promote sparsity with a Soft-Thresholding and Shrinkage operation as
 
-<center>z̃<sub>m,n</sub> = S<sub>λ</sub>(MLP(z<sub>m,n</sub>)),</center>
+<center>z̃<sub>m,n</sub> = S<sub>λ</sub>(MLP(z<sub>m,n</sub>))</center>
 <br>
 where S<sub>λ</sub>(x) = sign(x)max(\|x\| - λ,0) with the sparsity controlling parameter λ, and MLP() is a 2-layer multi-layer perceptron with block-diagonal weight matrices which are shared across all patches.
 
 **Step 3.** Inverse Fourier to transform back to the patch domain and add a residual connection as
 
-<center>y<sub>m,n</sub> = [IDFT(Z̃)]<sub>m,n</sub> + X<sub>m,n</sub>.</center>
+<center>y<sub>m,n</sub> = [IDFT(Z̃)]<sub>m,n</sub> + X<sub>m,n</sub></center>
 <br>
 The Adaptive Fourier Neural Operator (AFNO) model represents a groundbreaking approach to high-resolution weather forecasting, incorporating state-of-the-art deep learning techniques tailored for complex atmospheric systems. Developed by Guibas et al. in 2022, AFNO combines the robustness of the Fourier Neural Operator (FNO) learning approach with the efficiency of the Vision Transformer (ViT) architecture, offering unparalleled performance in capturing fine-scale atmospheric dynamics.
 
