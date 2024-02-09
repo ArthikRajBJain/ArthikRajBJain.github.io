@@ -79,6 +79,10 @@ FourCastNet's brilliance truly shines in scenarios demanding precision and effic
 
 In a head-to-head clash with the state-of-the-art DLWP model, FourCastNet emerges victorious. Predicting more variables at a significantly higher resolution, it goes beyond the status quo. Visual metrics, including Accuracy (ACC) and Root Mean Square Error (RMSE), underscore FourCastNet's dominance, even when its outputs are downscaled to match DLWP's resolution.
 
+![Comparision With Other DL Algorithms](/images/Comparision_DL.png)
+
+Comparing ACC and RMSE metrics among (downsampled) FourCastNet predictions, (downsampled) IFS, and the baseline state-of-the-art DLWP model [Weyn et al., 2020] for (a) Z500 and (b) T2m, FourCastNet predictions exhibit substantial enhancement over the baseline model. Additionally, FourCastNet produces predictions with eight times higher resolution, enabling the resolution of numerous crucial small-scale features compared to the DLWP model.
+
 # Implications and Future Trajectories:
 
 ## Efficiency and Accessibility:
