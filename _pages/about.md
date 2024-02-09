@@ -17,7 +17,7 @@ In the dynamic world of weather forecasting, advancements in technology continua
 
 At its core, FourCastNet is a testament to the fusion of innovation and neural networks. Developed on the robust foundations of Fourier Neural Operator (FNO) and Advection-Free Neural Operator (AFNO), this deep learning model has swiftly become a game-changer in the realm of weather prediction. Crafted in less than a year, it represents a departure from traditional numerical weather prediction (NWP) methodologies.
 
-![Weather Change in the globe](/images/Weather1.gif)
+![Weather Change in the globe](/images/Weather2.gif)
 
 ## Understanding Ensemble Forecasting:
 
