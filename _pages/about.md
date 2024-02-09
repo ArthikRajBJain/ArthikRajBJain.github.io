@@ -35,6 +35,24 @@ Fourier-based neural network forecasting model, to generate global data-driven f
 
 (a) The multi-layer transformer design employs the Adaptive Fourier Neural Operator (AFNO) alongside shared MLP and frequency soft-thresholding for spatial token mixing. Initially, the input frame is partitioned into h × w patches, each sized p × p × c. These patches undergo embedding into a higher-dimensional space with numerous latent channels, followed by the addition of positional embedding to create a token sequence. Spatial mixing via AFNO and subsequent channel mixing occur for each token across L layers. Finally, a linear decoder reconstructs patches for the next frame from the final embedding. The right-hand panels illustrate additional training and inference modes of the FourCastNet model: (b) two-step fine-tuning, (c) backbone model forecasting 20 variables (where p(k + 1) indicates 6-hour accumulated total precipitation between k + 1 and k + 2 time steps), and (d) free-running autoregressive inference mode.
 
+Here's a condensed version of the flow of computation in the model: We begin by projecting the input variables from the 720 × 1440 lat-lon grid to a 2D grid of patches (h × w) with a small patch size (e.g., p = 8), where each patch is represented as a d-dimensional token. These patches, along with positional encoding, are then passed through a series of AFNO layers. Each layer takes an input tensor of patches X ∈ Rh×w×d and conducts spatial mixing followed by channel mixing. Spatial mixing occurs in the Fourier domain.
+
+**Step 1.** Transform tokens to the Fourier domain with
+
+z<sub>m,n</sub> = [DFT(X)]<sub>m,n</sub>,
+
+where m, n index the patch location and DFT denotes a 2D discrete Fourier transform.
+
+**Step 2.** Apply token weighting in the Fourier domain, and promote sparsity with a Soft-Thresholding and Shrinkage operation as
+
+z̃<sub>m,n</sub> = S<sub>λ</sub>(MLP(z<sub>m,n</sub>)),
+
+where S<sub>λ</sub>(x) = sign(x)max(|x| - λ,0) with the sparsity controlling parameter λ, and MLP() is a 2-layer multi-layer perceptron with block-diagonal weight matrices which are shared across all patches.
+
+**Step 3.** Inverse Fourier to transform back to the patch domain and add a residual connection as
+
+y<sub>m,n</sub> = [IDFT(Z̃)]<sub>m,n</sub> + X<sub>m,n</sub>.
+
 The Adaptive Fourier Neural Operator (AFNO) model represents a groundbreaking approach to high-resolution weather forecasting, incorporating state-of-the-art deep learning techniques tailored for complex atmospheric systems. Developed by Guibas et al. in 2022, AFNO combines the robustness of the Fourier Neural Operator (FNO) learning approach with the efficiency of the Vision Transformer (ViT) architecture, offering unparalleled performance in capturing fine-scale atmospheric dynamics.
 
 ### Key Components:
