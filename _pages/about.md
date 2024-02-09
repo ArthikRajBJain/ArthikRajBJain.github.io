@@ -39,19 +39,19 @@ Here's a condensed version of the flow of computation in the model: We begin by 
 
 **Step 1.** Transform tokens to the Fourier domain with
 
-z<sub>m,n</sub> = [DFT(X)]<sub>m,n</sub>,
+<center>z<sub>m,n</sub> = [DFT(X)]<sub>m,n</sub>,</center>
 
 where m, n index the patch location and DFT denotes a 2D discrete Fourier transform.
 
 **Step 2.** Apply token weighting in the Fourier domain, and promote sparsity with a Soft-Thresholding and Shrinkage operation as
 
-z̃<sub>m,n</sub> = S<sub>λ</sub>(MLP(z<sub>m,n</sub>)),
+<center>z̃<sub>m,n</sub> = S<sub>λ</sub>(MLP(z<sub>m,n</sub>)),</center>
 
 where S<sub>λ</sub>(x) = sign(x)max(\|x\| - λ,0) with the sparsity controlling parameter λ, and MLP() is a 2-layer multi-layer perceptron with block-diagonal weight matrices which are shared across all patches.
 
 **Step 3.** Inverse Fourier to transform back to the patch domain and add a residual connection as
 
-y<sub>m,n</sub> = [IDFT(Z̃)]<sub>m,n</sub> + X<sub>m,n</sub>.
+<center>y<sub>m,n</sub> = [IDFT(Z̃)]<sub>m,n</sub> + X<sub>m,n</sub>.</center>
 
 The Adaptive Fourier Neural Operator (AFNO) model represents a groundbreaking approach to high-resolution weather forecasting, incorporating state-of-the-art deep learning techniques tailored for complex atmospheric systems. Developed by Guibas et al. in 2022, AFNO combines the robustness of the Fourier Neural Operator (FNO) learning approach with the efficiency of the Vision Transformer (ViT) architecture, offering unparalleled performance in capturing fine-scale atmospheric dynamics.
 
