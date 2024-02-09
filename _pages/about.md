@@ -47,7 +47,7 @@ where m, n index the patch location and DFT denotes a 2D discrete Fourier transf
 
 z̃<sub>m,n</sub> = S<sub>λ</sub>(MLP(z<sub>m,n</sub>)),
 
-where S<sub>λ</sub>(x) = sign(x)max(|x| - λ,0) with the sparsity controlling parameter λ, and MLP() is a 2-layer multi-layer perceptron with block-diagonal weight matrices which are shared across all patches.
+where S<sub>λ</sub>(x) = sign(x)max(\|x\| - λ,0) with the sparsity controlling parameter λ, and MLP() is a 2-layer multi-layer perceptron with block-diagonal weight matrices which are shared across all patches.
 
 **Step 3.** Inverse Fourier to transform back to the patch domain and add a residual connection as
 
